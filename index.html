@@ -10,14 +10,15 @@
       
       var accepted_types = [".png", ".js", ".gif"]
       
-      if (!accepted_types.includes(`.${type}`)) alert(`${type} is not a supported file type.\nSupported file types: ${accepted_types.join("\n")}`);
-      
-      console.log(`User is trying to get ${file}.${type}.`)
-      
-      if (file == null) document.write("<h1>You must include a '?filename=filename-here' queryString.</h1>");
-      if (type == null) document.write("<h1>Please pass a file type as a '?fileType=type' queryString.</h1>");
-      
-      var f = `https://fhgdev.github.io/my_cdn/cdn/${fileName}`
+      if (!accepted_types.includes(`.${type}`)) alert(`${type} is not a supported file type.\nSupported file types: ${accepted_types.join("\n")}`); else {
+
+        console.log(`User is trying to get ${file}.${type}.`)
+
+        if (file == null) document.write("<h1>You must include a '?filename=filename-here' queryString.</h1>");
+        if (type == null) document.write("<h1>Please pass a file type as a '?fileType=type' queryString.</h1>");
+
+        var f = `https://fhgdev.github.io/my_cdn/cdn/${fileName}`
+      }
       
       redirect(f)
       
