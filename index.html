@@ -10,8 +10,8 @@
       
         console.log(`User is trying to get ${file}.${type}.`)
 
-        if (file == null) return document.write("<h1>You must include a '?filename=filename-here' queryString.</h1>");
-        if (type == null) return document.write("<h1>Please pass a file type as a '?fileType=type' queryString.</h1>");
+        if (file == null) document.write("<h1>You must include a '?filename=filename-here' queryString.</h1>");
+        if (type == null) document.write("<h1>Please pass a file type as a '?fileType=type' queryString.</h1>");
 
         var f = `https://fhgdev.github.io/my_cdn/cdn/${fileName}`
       
